@@ -72,7 +72,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable @org.jetbrains.annotations.Nullable Intent data) {
         if (requestCode == REQUEST_CODE_NOVO_EVENTO && resultCode == RESULT_CODE_NOVO_EVENTO) {
             Evento evento = (Evento) data.getExtras().getSerializable("novoEvento");
-            evento.setId(++id);
+            id = id + 1;
+            evento.setId(id);
             this.adapterEventos.add(evento);
 
         } else if (requestCode == REQUEST_CODE_EDITAR_EVENTO && resultCode == RESULT_CODE_EVENTO_EDITADO) {
