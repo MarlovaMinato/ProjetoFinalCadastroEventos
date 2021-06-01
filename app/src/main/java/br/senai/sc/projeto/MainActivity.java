@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         setTitle("Eventos");
 
         listViewEventos = findViewById(R.id.listView_eventos);
-        ArrayList<Evento> eventos = this.criarListaEventos();
+        ArrayList<Evento> eventos = new ArrayList<Evento>();
 
         adapterEventos = new ArrayAdapter<Evento>(MainActivity.this,
                 android.R.layout.simple_list_item_1,
@@ -59,10 +59,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private ArrayList<Evento> criarListaEventos() {
-        ArrayList<Evento> eventos = new ArrayList<Evento>();
-        eventos.add(new Evento("EventoX", "dd/MM/yyyy", "Florianópolis");
-        return eventos;
+
 
     }
 
